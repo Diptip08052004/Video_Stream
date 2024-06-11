@@ -13,4 +13,5 @@ public interface VideoService {
     Video getVideoById(String id);
     void deleteVideoById(String id);
     List<Video> getAllVideos();
+//    String saveVideoState(long totalBytesRead,byte[] bytes);
 }

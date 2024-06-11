@@ -23,6 +23,7 @@ public class VideoServiceImpl implements VideoService{
                 file.getBytes(),
                 file.getSize(),
                 "1080p"
+                ,0
         );
         videoRepository.save(video);
         return video.getId();

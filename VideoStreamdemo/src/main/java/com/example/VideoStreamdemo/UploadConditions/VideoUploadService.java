@@ -67,4 +67,12 @@ public class VideoUploadService {
             throw  new RuntimeException("Error reading chunk from file",e);
         }
     }
+
+    private void resumeUpload() throws IOException {
+        if (uploadSession.isPaused()){
+            int lastChunkIndex=uploadSession.getLastChunkIndex();
+            uploadChunk(lastChunkIndex);
+        }
+    }
+
 }
